@@ -68,6 +68,7 @@ def encode_multipart(fields, files):
 	return content_type, body
 
 
+
 # replace the word KEY below with your apiKey obtained by Email #	
 key = 'KEY'
 # you need to specify the full path of image you wanna OCR #
@@ -77,12 +78,13 @@ image = open('D:\\Program Files\\IronPython-2.7.3\\111.png', "rb")
 # e.x 004.png #
 file = [('ocrfile','004.png',image.read())]
 # you need to modify parameters according to OcrKing Api Document #
-# Èç¹û²»´«µİÔ­Ê¼urlµ½type»òÂÒ´«Ò»¸öµØÖ·µ½type ½á¹ûºÜ¿ÉÄÜ¾ÍÊÇ´íµÄ #
-# Èç¹ûÏë½ûÖ¹ºóÌ¨×öÈÎºÎÔ¤´¦Àí  type¿ÉÒÔÉèÎª http://www.nopreprocess.com #
-# Èç¹ûÈ·Êµ²»È·¶¨ÑéÖ¤ÂëÍ¼Æ¬µÄÔ­url  type¿ÉÒÔÉèÎª http://www.unknown.com  ´ËÊ±ºóÌ¨Ö»½øĞĞ³£ÓÃÔ¤´¦Àí #
-# ´ËdemoÖĞtypeÖµÖ»Õë¶Ô´ËdemoÖĞµÄÍ¼Æ¬£¬ÆäËüÍøÕ¾Í¼Æ¬Çë²»ÒªÓÃ´ËÖµ #
+# å¦‚æœä¸ä¼ é€’åŸå§‹urlåˆ°typeæˆ–ä¹±ä¼ ä¸€ä¸ªåœ°å€åˆ°type ç»“æœå¾ˆå¯èƒ½å°±æ˜¯é”™çš„ #
+# å¦‚æœæƒ³ç¦æ­¢åå°åšä»»ä½•é¢„å¤„ç†  typeå¯ä»¥è®¾ä¸º http://www.nopreprocess.com #
+# å¦‚æœç¡®å®ä¸ç¡®å®šéªŒè¯ç å›¾ç‰‡çš„åŸurl  typeå¯ä»¥è®¾ä¸º http://www.unknown.com  æ­¤æ—¶åå°åªè¿›è¡Œå¸¸ç”¨é¢„å¤„ç† #
+# æ­¤demoä¸­typeå€¼åªé’ˆå¯¹æ­¤demoä¸­çš„å›¾ç‰‡ï¼Œå…¶å®ƒç½‘ç«™å›¾ç‰‡è¯·ä¸è¦ç”¨æ­¤å€¼ #
 fields = [('url',''),('service', 'OcrKingForCaptcha'),('language','eng'),('charset','7'),('apiKey', key),('type','https://www.bestpay.com.cn/api/captcha/getCode?1408294248050')]
 # just fire the post action #
 xml = post_multipart(fields,file)
 # print the result #
+
 print xml
